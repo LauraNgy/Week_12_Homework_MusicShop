@@ -6,12 +6,12 @@ public abstract class Instrument implements IPlay, ISell {
     private double sellingPrice;
     private double buyingPrice;
 
-    public Instrument(String material, String colour, InstrumentType instrumentType, double sellingPrice, double buyingPrice) {
+    public Instrument(String material, String colour, InstrumentType instrumentType, double buyingPrice, double sellingPrice) {
         this.material = material;
         this.colour = colour;
         this.instrumentType = instrumentType;
-        this.sellingPrice = sellingPrice;
         this.buyingPrice = buyingPrice;
+        this.sellingPrice = sellingPrice;
     }
 
     public String getMaterial() {
@@ -26,15 +26,15 @@ public abstract class Instrument implements IPlay, ISell {
         return this.instrumentType;
     }
 
+    public double getBuyingPrice() {
+        return this.buyingPrice;
+    }
+
     public double getSellingPrice() {
         return this.sellingPrice;
     }
 
     public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
-    }
-
-    public double getBuyingPrice() {
-        return this.buyingPrice;
     }
 }
