@@ -12,11 +12,6 @@ public class Guitar extends Instrument {
         return "brung";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return (getSellingPrice() - getBuyingPrice()) / getSellingPrice() * 100;
-    }
-
     public int getNumberOfStrings() {
         return this.numberOfStrings;
     }
